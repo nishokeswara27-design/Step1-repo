@@ -1,21 +1,22 @@
-
-/**
- * OOPSBannerApp
- * 
- * This program prints the text "OOPS" to the console.
- * It demonstrates the basic structure of a Java application.
- * 
- * @author YourName
- * @version 1.0
- */
-public class OOPSBannerApp {
-
-
-    /**
-     * Main method - Entry point of the Java application
-     * @param args Command-line arguments
-     */
+import java.util.Scanner;
+ 
+class StudentResultIndicator {
+ 
     public static void main(String[] args) {
-        System.out.println("OOPS");
+        Scanner input = new Scanner(System.in);
+ 
+        // get student score from the user
+        System.out.println("Enter grade");
+        int studentGrade = input.nextInt();
+ 
+        // if studentGrade is 50 or above
+        if (studentGrade >= 50) {
+            System.out.println("Congratulations!");
+            System.out.println("You passed the examination.");
+        } else {
+            // Student_grade is less than 50
+            System.out.println("Sorry.\nYou failed the examination.");
+        }
+        input.close();
     }
 }
